@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <title>One Page Website</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/css_1.css">
+	</head>
+	<body>
+
+<!-- A <nav> element that uses HTML bookmarks for the user to navigate various sections on the page-->
+ 	<nav>
+ 		<ul>
+				<a href="#home"><li>Home</li></a>
+				<a href="#gallery"><li>Gallery</li></a>
+				<a href="#subscribe"><li>Subscribe</li></a>
+		</ul>
+ 	</nav>
+<!-- End of Nav -->
+
+<!-- Home Page Section with heading tag, <p> tag, etc. -->
+    <div id="home">
+			<h1>Wildflowers of Oregon</h1>
+      <h3>These wildflowers are found in the state of Oregon</h3>
+      <p>Click the images below to see more</p>
+		</div>
+<!-- End of Home -->
+
+<!-- Section with <img> tags, etc. -->
+<div class="row" id="gallery">
+  <div class="column">
+    <img src="./images/Bachelors_Button.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="./images/California_Poppy.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 2</div>
+      <img src="./images/Bachelors_Button.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 2</div>
+      <img src="./images/California_Poppy.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <div class="column">
+      <img class="demo picture cursor" src="./images/Bachelors_Button.jpg" style="width:100%" onclick="currentSlide(1)" alt="Bachelor's Button">
+    </div>
+    <div class="column">
+      <img class="demo picture cursor" src="./images/California_Poppy.jpg" style="width:100%" onclick="currentSlide(2)" alt="California Poppy">
+    </div>
+  </div> 
+</div>
+
+
+<!-- Contact Form (<form> tag, <input> tag, etc.) -->
+	<section>	
+        <div id="subscribe">
+            <div>
+                <h1>Subscribe</h1>
+            </div>
+            <div>
+                <h2><span>Sign up for our newsletter today. Stay up to date with gardening tips, special events, and workshops!</span>
+                </h2>
+                <p>
+                    Please provide us with your basic contact information.
+                </p>
+            </div>
+            <div>
+                <form id="form1" action="" method="post">
+                    <input class="info" type="text" value="First Name">
+                    <input class="info" type="text" value="Last Name">
+                    <input class="info" type="text" value="Email Address">
+                    <input class="info" type="text" value="Phone Number">
+                    <div class="form-spacer">
+                        <label class="terms">Terms and Conditions</label>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- End of Contact Form -->
+    
+    
+    <!-- Section with a video (<iframe> tag, src attribute, etc.) -->
+      <a id="videolink" href="https://www.youtube.com/watch?v=Ybzdyu7HFX8">Wildflower Growing Video</a>
+                 <div id="video">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/RRbu9COO17M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+    <!-- End of Video Section -->  
+   
+  <!-- Footer(<footer> tag, etc.) -->
+            
+    <footer>
+        Wildflowers of Oregon 2020
+    </footer>
+<!-- End of Footer -->
+
+<script src="js/javascript.js"></script>
+
+</body>         
+</html>
